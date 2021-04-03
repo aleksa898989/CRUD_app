@@ -12,7 +12,7 @@ const Listing = ({ users }) => {
             <>
               <Link
                 //  target={"__blank"}
-                to={`/posts?userId=${item.id}`}
+                to={`/posts/user/${item.id}`}
               >
                 <Item item={item} />
               </Link>
