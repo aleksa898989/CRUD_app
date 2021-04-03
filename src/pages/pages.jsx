@@ -7,15 +7,15 @@ import ListingUsers from "components/users";
 const Pages = () => {
   let selectedUserPath = window.location.href;
   let selectedPostPath = `${window.location.pathname}`;
-  console.log(window.location.href);
+
   return (
     <>
       <Switch>
         <Route path="/" exact component={Listing} />{" "}
         <Route path="/users" exact component={ListingUsers} />{" "}
+        {/* FIX THIS selected post path gazi ovo drugo i nikad ne udje u komponentu jer uvek renderuje SelectedPost */}
         <Route path={selectedPostPath} exact component={SelectedPost} />
-        {/* <Route path={selectedUserPath} exact component={SelectedUser} /> */}
-        <Route path={selectedUserPath} children={<SelectedUser />} />
+        <Route path={selectedUserPath} exact component={SelectedUser} />
       </Switch>
     </>
   );
