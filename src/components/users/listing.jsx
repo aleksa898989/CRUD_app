@@ -10,10 +10,7 @@ const Listing = ({ users }) => {
         {users?.map((item, index) => {
           return (
             <>
-              <Link
-                //  target={"__blank"}
-                to={`/posts/user/${item.id}`}
-              >
+              <Link target={"__blank"} to={`/posts/user/${item.id}`}>
                 <Item item={item} />
               </Link>
             </>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { MDBContainer, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+import AddPost from "components/posts/add";
+import EditPost from "components/posts/edit";
 
 const SelectedPost = () => {
   const [selected, setSelected] = useState();
@@ -35,6 +37,17 @@ const SelectedPost = () => {
             </tr>
           </MDBTableBody>
         </MDBTable>
+        <AddPost
+          title={"test title"}
+          userId={data?.userId}
+          body={" test body"}
+        />
+        <EditPost
+          id={data?.id}
+          title={"test title"}
+          userId={data?.userId}
+          body={" test body"}
+        />
       </MDBContainer>
     </>
   );

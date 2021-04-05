@@ -7,10 +7,6 @@ const Listing = ({ posts }) => {
     <>
       <MDBContainer>
         <h1 className="text-center mb-5 mt-5">Posts</h1>
-        <Link to={"/users"}>
-          <h1 className="text-center mb-5 mt-5">Users</h1>
-        </Link>
-
         {posts?.map((item, index) => {
           return (
             <>
