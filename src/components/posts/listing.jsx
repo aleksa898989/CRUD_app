@@ -1,4 +1,4 @@
-import { MDBContainer } from "mdbreact";
+import { MDBContainer, MDBIcon } from "mdbreact";
 import Item from "./item";
 import { Link } from "react-router-dom";
 
@@ -7,9 +7,8 @@ const Listing = ({ posts }) => {
     <>
       <MDBContainer>
         <h1 className="text-center mb-5 mt-5">Posts</h1>
-
-        <Link className="mb-5" to={"/"}>
-          Home
+        <Link to={"/"}>
+          <MDBIcon icon="home" />
         </Link>
         {posts?.map((item, index) => {
           return (

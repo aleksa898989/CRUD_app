@@ -1,5 +1,34 @@
+@import "./components/posts/add/add";
+@import "./components/posts/edit/edit";
+html {
+  background-color: #f2f2f2;
+}
 #root {
+  background-color: #f2f2f2;
   td {
     min-width: 5rem;
   }
+}
+
+input {
+  padding: 1rem;
+  text-indent: 2rem;
+  border-radius: 0.2rem;
+  margin-bottom: 2rem !important;
+}
+.submit-btn {
+  padding: 1rem 1rem;
+  color: #fff;
+  background-color: dodgerblue;
+  text-transform: uppercase;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+.fa-home {
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 2rem;
 }

@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { MDBContainer, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+import {
+  MDBContainer,
+  MDBIcon,
+  MDBTable,
+  MDBTableBody,
+  MDBTableHead,
+} from "mdbreact";
+import { Link } from "react-router-dom";
 
 const SelectedUser = () => {
   let id = window.location.pathname;
@@ -18,7 +25,10 @@ const SelectedUser = () => {
   return (
     <>
       <MDBContainer className="mt-5">
-        <h1 className="mb-5">Users</h1>
+        <h1 className="mb-5 text-center">Users</h1>
+        <Link to={"/"}>
+          <MDBIcon icon="home" />
+        </Link>
         <MDBTable>
           <MDBTableHead color="primary-color" textWhite>
             <tr>

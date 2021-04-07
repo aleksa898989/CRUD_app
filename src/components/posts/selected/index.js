@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { MDBContainer, MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+import {
+  MDBContainer,
+  MDBIcon,
+  MDBTable,
+  MDBTableBody,
+  MDBTableHead,
+} from "mdbreact";
 import { Link } from "react-router-dom";
 
 const SelectedPost = () => {
@@ -17,6 +23,9 @@ const SelectedPost = () => {
   return (
     <>
       <MDBContainer className="mt-5">
+        <Link to={"/"}>
+          <MDBIcon icon="home" />
+        </Link>
         <MDBTable>
           <MDBTableHead color="primary-color" textWhite>
             <tr>
