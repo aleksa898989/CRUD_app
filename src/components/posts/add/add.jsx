@@ -3,11 +3,13 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Notification from "layout/notification";
+import { Redirect } from "react-router-dom";
 
 const AddPost = () => {
   const [response, setResponse] = useState("");
   const [message, setMessage] = useState("");
   const [showNotification, setShowNotification] = useState(false);
+  const [shouldRedirect, setShouldRedirect] = useState(false);
   const {
     register,
     handleSubmit,
@@ -15,7 +17,7 @@ const AddPost = () => {
   } = useForm({
     mode: "onBlur",
   });
-  const onSubmit = async (data, e) => {
+  const onSubmit = async (data) => {
     try {
       fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
@@ -30,15 +32,17 @@ const AddPost = () => {
           setResponse(response);
           setMessage(response.status);
           setShowNotification(true);
+          setTimeout(() => {
+            setShouldRedirect(true);
+          }, 4000);
           response.json();
-          e.target.reset();
         })
         .then((json) => console.log(json));
     } catch (error) {
       console.log("!error ", error);
     }
   };
-  console.log(errors);
+  if (shouldRedirect) return <Redirect to="/" />;
   return (
     <>
       <MDBContainer className="mt-5 text-center mb-5 add-form-wrapper">
