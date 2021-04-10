@@ -68,7 +68,7 @@ const AddPost = () => {
           <input
             name="body"
             type="text"
-            placeholder="body"
+            placeholder="Body"
             className={`${
               errors && errors?.body?.type === "required" ? "required" : ""
             }`}

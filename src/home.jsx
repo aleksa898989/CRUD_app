@@ -7,10 +7,10 @@ const Home = () => {
       <div id="overlay"></div>
       <MDBRow className="mt-5">
         <MDBCol md="12" className="d-flex flex-column">
-          <Link to={"/posts"}>Posts Listing</Link>
-          <Link to={"/add/posts/"}>Add new post</Link>
-          <Link to={"/edit/posts/"}>Edit existing post</Link>
-          <Link to={"/users"}>Users Listing</Link>
+          <Link to={"/posts"}>Posts</Link>
+          <Link to={"/users"}>Users</Link>
+          <Link to={"/add/posts/"}>Add post</Link>
+          <Link to={"/edit/posts/"}>Edit post</Link>
         </MDBCol>
       </MDBRow>
     </MDBContainer>
