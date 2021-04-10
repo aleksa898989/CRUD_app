@@ -1,7 +1,7 @@
 @import "./components/posts/add/add";
 @import "./components/posts/edit/edit";
 @import "./layout/layout";
-
+@import "./home";
 html {
   background-color: #f2f2f2;
 }
@@ -42,4 +42,16 @@ input {
   text-align: center;
   font-size: 5rem;
   margin-bottom: 2rem;
+}
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 2;
 }

@@ -1,0 +1,21 @@
+.home-wrapper {
+  height: 100vh;
+  min-width: 100% !important;
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20(51).jpg");
+  padding-top: 12rem !important;
+  h1 {
+    color: white;
+    z-index: 3;
+  }
+  a {
+    font-size: 3rem;
+    z-index: 3;
+    color: white;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
