@@ -83,7 +83,6 @@ const AddPost = () => {
             }`}
             {...register("userId", { required: true })}
           />
-          {console.log(errors)}
           {errors && errors?.userId?.type === "required" && (
             <label htmlFor="userId" className="required-label">
               This field is required and must be number!
