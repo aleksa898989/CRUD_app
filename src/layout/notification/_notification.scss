@@ -1,0 +1,20 @@
+.notification-container {
+  .toast {
+    width: 30rem;
+    .toast-header {
+      color: black;
+      .close {
+        span {
+          font-size: 2rem;
+          color: black;
+        }
+      }
+      i {
+        display: none;
+      }
+    }
+    .toast-body {
+      color: black;
+    }
+  }
+}

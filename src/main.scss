@@ -1,5 +1,7 @@
 @import "./components/posts/add/add";
 @import "./components/posts/edit/edit";
+@import "./layout/layout";
+
 html {
   background-color: #f2f2f2;
 }
@@ -9,12 +11,21 @@ html {
     min-width: 5rem;
   }
 }
-
+.required {
+  border: 1px solid red;
+}
+.required-label {
+  color: red;
+}
+input:focus {
+  outline: none;
+}
 input {
+  border: transparent;
   padding: 1rem;
   text-indent: 2rem;
   border-radius: 0.2rem;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
 }
 .submit-btn {
   padding: 1rem 1rem;
