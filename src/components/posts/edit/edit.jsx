@@ -16,7 +16,7 @@ const EditPost = () => {
   const [message, setMessage] = useState("");
   const [showNotification, setShowNotification] = useState(false);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, e) => {
     try {
       fetch(`https://jsonplaceholder.typicode.com/posts/${data.id}`, {
         method: "PUT",
@@ -30,6 +30,7 @@ const EditPost = () => {
           setMessage(response.status);
           setShowNotification(true);
           response.json();
+          e.target.reset();
         })
         .then((json) => console.log(json));
     } catch (error) {

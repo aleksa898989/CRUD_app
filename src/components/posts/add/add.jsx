@@ -15,7 +15,7 @@ const AddPost = () => {
   } = useForm({
     mode: "onBlur",
   });
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, e) => {
     try {
       fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
@@ -31,6 +31,7 @@ const AddPost = () => {
           setMessage(response.status);
           setShowNotification(true);
           response.json();
+          e.target.reset();
         })
         .then((json) => console.log(json));
     } catch (error) {
