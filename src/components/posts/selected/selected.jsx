@@ -9,13 +9,11 @@ import {
 } from "mdbreact";
 import { Link } from "react-router-dom";
 
-const SelectedUser = () => {
-  let id = window.location.pathname;
-  let lastChar = id.substr(id.length - 1);
+const SelectedPost = () => {
   const [selected, setSelected] = useState();
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts?userId=${lastChar}`)
+      .get(`https://jsonplaceholder.typicode.com${window.location.pathname}`)
       .then((res) => {
         const selected = res.data;
         setSelected({ selected });
@@ -25,13 +23,12 @@ const SelectedUser = () => {
   return (
     <>
       <MDBContainer className="mt-5">
-        <h1 className="mb-5 text-center">Users</h1>
         <div className="d-flex flex-row align-items-center">
           <Link to={"/"}>
             <MDBIcon icon="home" />
           </Link>
-          <Link style={{ marginLeft: "5rem" }} to={"/users"}>
-            Back to user listing
+          <Link style={{ marginLeft: "5rem" }} to={"/posts"}>
+            Back to post listing
           </Link>
         </div>
         <MDBTable>
@@ -45,18 +42,12 @@ const SelectedUser = () => {
           </MDBTableHead>
 
           <MDBTableBody>
-            {data?.map((item) => {
-              return (
-                <>
-                  <tr>
-                    <td>{item?.id}</td>
-                    <td>{item?.userId}</td>
-                    <td>{item?.title}</td>
-                    <td>{item?.body}</td>
-                  </tr>
-                </>
-              );
-            })}
+            <tr>
+              <td>{data?.id}</td>
+              <td>{data?.userId}</td>
+              <td>{data?.title}</td>
+              <td>{data?.body}</td>
+            </tr>
           </MDBTableBody>
         </MDBTable>
       </MDBContainer>
@@ -64,4 +55,4 @@ const SelectedUser = () => {
   );
 };
 
-export default SelectedUser;
+export default SelectedPost;

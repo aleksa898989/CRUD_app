@@ -3,27 +3,29 @@ import { MDBTable, MDBTableHead, MDBTableBody } from "mdbreact";
 const Item = ({ item }) => {
   return (
     <>
-      <MDBTable>
+      <MDBTable responsive>
         <MDBTableHead color="primary-color" textWhite>
           <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Phone</th>
             <th>Website</th>
-            <th>email</th>
+            <th>Email</th>
             <th>Address</th>
             <th>Company</th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
           <tr>
-            <td>{item.id}</td>
-            <td>{item.name}</td>
-            <td>{item.phone}</td>
-            <td>{item.username}</td>
-            <td>{item.website}</td>
-            <td>{item.email}</td>
-            <td>{item.company.name}</td>
+            <td className="posts-and-users-listing-td">{item.id}</td>
+            <td className="posts-and-users-listing-td">{item.name}</td>
+            <td className="posts-and-users-listing-td">{item.phone}</td>
+            <td className="posts-and-users-listing-td">{item.website}</td>
+            <td className="posts-and-users-listing-td">{item.email}</td>
+            <td className="posts-and-users-listing-td">
+              {item.address.street}
+            </td>
+            <td className="posts-and-users-listing-td">{item.company.name}</td>
           </tr>
         </MDBTableBody>
       </MDBTable>

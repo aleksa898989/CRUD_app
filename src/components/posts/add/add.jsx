@@ -1,15 +1,19 @@
 import { MDBContainer, MDBIcon } from "mdbreact";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import Notification from "layout/notification";
 import { Redirect } from "react-router-dom";
 
-const AddPost = () => {
-  const [response, setResponse] = useState("");
-  const [message, setMessage] = useState("");
-  const [showNotification, setShowNotification] = useState(false);
-  const [shouldRedirect, setShouldRedirect] = useState(false);
+const AddPost = ({
+  shouldRedirect,
+  message,
+  response,
+  showNotification,
+  setResponse,
+  setMessage,
+  setShowNotification,
+  setShouldRedirect,
+}) => {
   const {
     register,
     handleSubmit,
@@ -46,9 +50,14 @@ const AddPost = () => {
   return (
     <>
       <MDBContainer className="mt-5 text-center mb-5 add-form-wrapper">
-        <Link to={"/"}>
-          <MDBIcon icon="home" />
-        </Link>
+        <div className="d-flex flex-row align-items-center">
+          <Link to={"/"}>
+            <MDBIcon icon="home" />
+          </Link>
+          <Link style={{ marginLeft: "5rem" }} to={"/posts"}>
+            Back to post listing
+          </Link>
+        </div>
         <h2>Add New post</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column">
           <input

@@ -7,9 +7,6 @@ html {
 }
 #root {
   background-color: #f2f2f2;
-  td {
-    min-width: 5rem;
-  }
 }
 .required {
   border: 1px solid red;
@@ -39,8 +36,8 @@ input {
 }
 .fa-home {
   width: 100%;
-  text-align: center;
-  font-size: 5rem;
+  text-align: left;
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 #overlay {
@@ -54,4 +51,12 @@ input {
   background-color: black;
   opacity: 0.8;
   z-index: 2;
+}
+table {
+  td {
+    min-width: 5rem;
+  }
+}
+.posts-and-users-listing-td {
+  max-width: 5rem;
 }
