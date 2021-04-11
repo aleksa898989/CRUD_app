@@ -27,7 +27,7 @@ const Listing = ({ posts }) => {
           return (
             <>
               <Link target={"_blank"} to={`/posts/${item.id}`}>
-                <Item key={item?.id} item={item} />;
+                <Item key={item?.id} item={item} />
               </Link>
             </>
           );
