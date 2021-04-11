@@ -56,6 +56,12 @@ input {
   z-index: 2;
 }
 table {
+  td {
+    max-width: 5rem;
+    @media screen and (max-width: 600px) {
+      min-width: unset;
+    }
+  }
   th {
     min-width: 5rem;
     @media screen and (max-width: 600px) {
