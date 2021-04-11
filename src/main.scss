@@ -58,13 +58,13 @@ input {
 table {
   td {
     max-width: 5rem;
-    @media screen and (max-width: 600px) {
-      min-width: unset;
+    @media screen and (max-width: 992px) {
+      max-width: unset;
     }
   }
   th {
     min-width: 5rem;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 992px) {
       min-width: unset;
     }
   }
