@@ -13,7 +13,9 @@ const SelectedPost = () => {
   const [selected, setSelected] = useState();
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com${window.location.pathname}`)
+      .get(
+        `https://jsonplaceholder.typicode.com${window.location.pathname}/comments`
+      )
       .then((res) => {
         const selected = res.data;
         setSelected({ selected });
@@ -34,20 +36,28 @@ const SelectedPost = () => {
         <MDBTable>
           <MDBTableHead color="primary-color" textWhite>
             <tr>
+              <th>Post ID</th>
               <th>ID</th>
-              <th>User ID</th>
-              <th>Title</th>
+              <th>Email</th>
+              <th>Name</th>
               <th>Comment</th>
             </tr>
           </MDBTableHead>
 
           <MDBTableBody>
-            <tr>
-              <td>{data?.id}</td>
-              <td>{data?.userId}</td>
-              <td>{data?.title}</td>
-              <td>{data?.body}</td>
-            </tr>
+            {data?.map((item) => {
+              return (
+                <>
+                  <tr>
+                    <td>{item?.postId}</td>
+                    <td>{item?.id}</td>
+                    <td>{item?.email}</td>
+                    <td>{item?.name}</td>
+                    <td>{item?.body}</td>
+                  </tr>
+                </>
+              );
+            })}
           </MDBTableBody>
         </MDBTable>
       </MDBContainer>

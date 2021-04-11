@@ -9,13 +9,15 @@ const Item = ({ item }) => {
             <th>ID</th>
             <th>User ID</th>
             <th>Title</th>
+            <th>Comment</th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
           <tr>
-            <td className="posts-and-users-listing-td">{item.id}</td>
-            <td className="posts-and-users-listing-td">{item.userId}</td>
-            <td className="posts-and-users-listing-td">{item.title}</td>
+            <td>{item.id}</td>
+            <td>{item.userId}</td>
+            <td>{item.title}</td>
+            <td>{item.body}</td>
           </tr>
         </MDBTableBody>
       </MDBTable>
