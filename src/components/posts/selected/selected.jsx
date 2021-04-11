@@ -43,17 +43,16 @@ const SelectedPost = () => {
               <th>Comment</th>
             </tr>
           </MDBTableHead>
-
           <MDBTableBody>
-            {data?.map((item) => {
+            {data?.map(({ postId, id, email, name, body }) => {
               return (
                 <>
                   <tr>
-                    <td>{item?.postId}</td>
-                    <td>{item?.id}</td>
-                    <td>{item?.email}</td>
-                    <td>{item?.name}</td>
-                    <td>{item?.body}</td>
+                    <td>{postId}</td>
+                    <td>{id}</td>
+                    <td>{email}</td>
+                    <td>{name}</td>
+                    <td>{body}</td>
                   </tr>
                 </>
               );

@@ -6,6 +6,7 @@ import ListingUsers from "components/users";
 import Home from "../home";
 import AddPost from "components/posts/add";
 import EditPost from "components/posts/edit";
+import DeletePost from "components/posts/delete";
 
 const Pages = () => {
   return (
@@ -18,6 +19,7 @@ const Pages = () => {
         <Route path={`/posts/user/:id`} exact component={SelectedUser} />
         <Route path={`/edit/posts/`} exact component={EditPost} />
         <Route path={`/add/posts/`} exact component={AddPost} />
+        <Route path={`/delete/posts/`} exact component={DeletePost} />
       </Switch>
     </>
   );

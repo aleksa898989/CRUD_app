@@ -11,6 +11,7 @@ const Home = () => {
           <Link to={"/users"}>Users</Link>
           <Link to={"/add/posts/"}>Add post</Link>
           <Link to={"/edit/posts/"}>Edit post</Link>
+          <Link to={"/delete/posts/"}>Delete post</Link>
         </MDBCol>
       </MDBRow>
     </MDBContainer>

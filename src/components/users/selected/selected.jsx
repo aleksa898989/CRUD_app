@@ -45,14 +45,14 @@ const SelectedUser = () => {
           </MDBTableHead>
 
           <MDBTableBody>
-            {data?.map((item) => {
+            {data?.map(({ id, userId, title, body }) => {
               return (
                 <>
                   <tr>
-                    <td>{item?.id}</td>
-                    <td>{item?.userId}</td>
-                    <td>{item?.title}</td>
-                    <td>{item?.body}</td>
+                    <td>{id}</td>
+                    <td>{userId}</td>
+                    <td>{title}</td>
+                    <td>{body}</td>
                   </tr>
                 </>
               );
