@@ -30,7 +30,7 @@ const SelectedPost = () => {
             <MDBIcon icon="home" />
           </Link>
           <Link style={{ marginLeft: "5rem" }} to={"/posts"}>
-            Back to post listing
+            Posts listing
           </Link>
         </div>
         <MDBTable>

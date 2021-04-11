@@ -31,7 +31,7 @@ const SelectedUser = () => {
             <MDBIcon icon="home" />
           </Link>
           <Link style={{ marginLeft: "5rem" }} to={"/users"}>
-            Back to user listing
+            Users listing
           </Link>
         </div>
         <MDBTable>

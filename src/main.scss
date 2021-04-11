@@ -38,7 +38,6 @@ input {
   width: 100%;
   text-align: left;
   font-size: 3rem;
-  margin-bottom: 2rem;
   @media screen and(max-width: 992px) {
     text-align: center;
   }
@@ -56,6 +55,7 @@ input {
   z-index: 2;
 }
 table {
+  margin-top: 2rem;
   td {
     max-width: 5rem;
     @media screen and (max-width: 992px) {

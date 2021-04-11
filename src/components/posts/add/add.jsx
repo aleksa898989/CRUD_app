@@ -55,7 +55,7 @@ const AddPost = ({
             <MDBIcon icon="home" />
           </Link>
           <Link style={{ marginLeft: "5rem" }} to={"/posts"}>
-            Back to post listing
+            Posts listing
           </Link>
         </div>
         <h2>Add New post</h2>

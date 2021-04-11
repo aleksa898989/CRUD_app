@@ -35,9 +35,11 @@ const EditPost = ({
           setResponse(response);
           setMessage(response.status);
           setShowNotification(true);
-          setTimeout(() => {
-            setShouldRedirect(true);
-          }, 4000);
+          if (response.ok) {
+            setTimeout(() => {
+              setShouldRedirect(true);
+            }, 4000);
+          }
           response.json();
         })
         .then((json) => console.log(json));
@@ -56,7 +58,7 @@ const EditPost = ({
             <MDBIcon icon="home" />
           </Link>
           <Link style={{ marginLeft: "5rem" }} to={"/posts"}>
-            Back to post listing
+            Posts listing
           </Link>
         </div>
         <h2>Edit existing post</h2>
