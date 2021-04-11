@@ -59,7 +59,7 @@ const DeletePost = ({
             Back to post listing
           </Link>
         </div>
-        <h2>Edit existing post</h2>
+        <h2>Delete post</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column">
           <input
             type="number"

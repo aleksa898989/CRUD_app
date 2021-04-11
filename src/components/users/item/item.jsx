@@ -17,15 +17,13 @@ const Item = ({ item }) => {
         </MDBTableHead>
         <MDBTableBody>
           <tr>
-            <td className="posts-and-users-listing-td">{item.id}</td>
-            <td className="posts-and-users-listing-td">{item.name}</td>
-            <td className="posts-and-users-listing-td">{item.phone}</td>
-            <td className="posts-and-users-listing-td">{item.website}</td>
-            <td className="posts-and-users-listing-td">{item.email}</td>
-            <td className="posts-and-users-listing-td">
-              {item.address.street}
-            </td>
-            <td className="posts-and-users-listing-td">{item.company.name}</td>
+            <td>{item.id}</td>
+            <td>{item.name}</td>
+            <td>{item.phone}</td>
+            <td>{item.website}</td>
+            <td>{item.email}</td>
+            <td>{item.address.street}</td>
+            <td>{item.company.name}</td>
           </tr>
         </MDBTableBody>
       </MDBTable>

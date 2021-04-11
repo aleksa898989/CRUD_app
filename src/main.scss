@@ -39,6 +39,9 @@ input {
   text-align: left;
   font-size: 3rem;
   margin-bottom: 2rem;
+  @media screen and(max-width: 992px) {
+    text-align: center;
+  }
 }
 #overlay {
   position: fixed;
@@ -53,7 +56,10 @@ input {
   z-index: 2;
 }
 table {
-  td {
+  th {
     min-width: 5rem;
+    @media screen and (max-width: 600px) {
+      min-width: unset;
+    }
   }
 }
